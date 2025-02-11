@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Web App</title>
+    <link rel="icon" href="favicon.png" type="image/png"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #567C8D; /* สีพื้นหลังของปุ่ม */
+            color: #E5E5E5; /* สีข้อความของปุ่ม */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #3B5B63; /* เปลี่ยนสีพื้นหลังเมื่อชี้ไปที่ปุ่ม */
+            color: #FFFFFF; /* เปลี่ยนสีข้อความเมื่อชี้ไปที่ปุ่ม */
+        }
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ติดต่อเรา</h1>
+    <div class="contact-container">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">ชื่อ:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">ข้อความ:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // ป้องกันการรีเฟรชหน้า
+            alert('ขอบคุณที่ติดต่อเรา! เราจะตอบกลับในไม่ช้า.');
+            // ที่นี่คุณสามารถเพิ่มฟังก์ชันส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์ได้
+        });
+    </script>
+</body>
+</html>
