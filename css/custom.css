@@ -70,6 +70,22 @@
     margin-bottom: 30px;
 }
 
+h3 {
+    margin: 0;
+    color: #770033;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h4 {
+    border-radius: 10px;
+    opacity: 0.8;
+    font-size: 17px;
+}
+
+
+
 /* General Reset */
 * {
     margin: 0;
