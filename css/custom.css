@@ -26,6 +26,7 @@
 }
 
 
+/*.hero-content */
 @font-face {
     font-family: 'HennyPenny-Regular'; /* ตั้งชื่อฟอนต์ */
     src: url('../assets/font/HennyPenny-Regular.ttf') format('truetype');
@@ -50,7 +51,7 @@
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('../assets/images/halloween.jpg') no-repeat left top;
+    background: url('../assets/images/l.jpg') no-repeat left top;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -62,7 +63,7 @@
 
 /* ขยับเฉพาะเนื้อหาภายใน */
 .hero-content {
-    padding-top: 100px; /* ขยับเนื้อหาลงมา */
+    padding-top: 70px; /* ขยับเนื้อหาลงมา */
     
 }
 
@@ -165,6 +166,131 @@ h4 {
     border: 3px solid #333;
     padding: 4px;
 }
+.user-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* ขยับรูปไปทางซ้ายในเฉพาะหน้า papa.html */
+.img-move-left {
+    display: block;
+    margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+/* ปรับขนาดฟอนต์ของชื่อ */
+.papa-name {
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+
+
+/* ขยับรูปไปทางซ้ายเฉพาะหน้า cream.html */
+.img-cream-left {
+    display: block;
+    margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+.cream-name {
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+
+
+/* ขยับรูปไปทางซ้ายเฉพาะหน้า saipan.html */
+.img-saipan-left {
+    display: block;
+    margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+/* ทำให้รูปใน saipan.html เป็นวงกลม */
+.img-saipan-left {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    object-fit: cover; /* ป้องกันภาพผิดสัดส่วน */
+}
+/* ปรับขนาดฟอนต์ของชื่อ */
+.saipan-name {
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+@font-face {
+    font-family: 'Lora-VariableFont_wght'; /* ตั้งชื่อฟอนต์ */
+    src: url('../assets/font/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* เปลี่ยนฟอนต์ของ More Members */
+.text-center{
+    font-family: 'Lora-VariableFont_wght', sans-serif; /* เปลี่ยนเป็นฟอนต์ที่ต้องการ */
+    font-size: 40px; /* ปรับขนาด */
+    font-weight: bold; /* ทำให้ตัวหนา */
+    color: #3c3042; 
+}
+/* ลดตำแหน่งของ ✮✮✮ ลงมา */
+.text-center {
+    margin-top: 80px; /* เพิ่มระยะห่างจากด้านบน */
+    margin-bottom: 30px; /* ลดให้ต่ำลง */
+}
+
+
+
+
+/* ขยับรูปไปทางซ้ายเฉพาะหน้า wawa.html */
+.img-wawa-left {
+    display: block;
+    margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+/* ทำให้รูปใน wawa.html เป็นวงกลม */
+.img-wawa-left {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    object-fit: cover; /* ป้องกันภาพผิดสัดส่วน */
+}
+.wawa-name {
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+
+/* ขยับรูปไปทางซ้ายเฉพาะหน้า earn.html */
+.img-earn-left {
+    display: block;
+    margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+.earn-name {
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+
+/* จัดให้ card-item อยู่ตรงกลาง */
+.card-list .card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    width: 400px;
+    height: 450px; /* กำหนดความสูงให้แน่นอน */
+    padding: 35px;
+    user-select: none;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* จัดให้รูปอยู่ตรงกลาง และไม่ผิดสัดส่วน */
+.card-list .card-item .user-image {
+    width: 150px; /* กำหนดขนาดรูป */
+    height: 150px;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    object-fit: cover; /* ทำให้รูปพอดีกับกรอบ */
+    display: block;
+    margin: 0 auto; /* จัดให้ตรงกลาง */
+    border: 3px solid #333;
+    padding: 4px;
+}
+
 
 /* User Description */
 .card-list .card-item .user-desc {
