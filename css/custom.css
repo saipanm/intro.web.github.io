@@ -25,18 +25,53 @@
     color: white !important;
 }
 
+
+@font-face {
+    font-family: 'HennyPenny-Regular'; /* ตั้งชื่อฟอนต์ */
+    src: url('../assets/font/HennyPenny-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* เปลี่ยนฟอนต์เฉพาะ h1 ใน .hero-content */
+.hero-content h1 {
+    font-family: 'HennyPenny-Regular', sans-serif;
+    font-size: 60px;
+}
+/* เปลี่ยนฟอนต์เฉพาะ h2 ใน .hero-content */
+.hero-content h2 {
+    font-family: 'HennyPenny-Regular', sans-serif;
+    font-size: 40px; /* กำหนดขนาดตัวอักษร */
+    color: rgb(255, 255, 255); /* กำหนดสีข้อความ */
+}
+
+
+
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('../assets/images/group-3.jpg') no-repeat center center;
+    background: url('../assets/images/halloween.jpg') no-repeat left top;
     background-size: cover;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+    align-items: center; /* จัดเนื้อหาแนวตั้ง */
+    justify-content: flex-start; /* ชิดซ้าย */
+    text-align: left;
+    padding: 20px; /* เว้นขอบรอบๆ */
 }
+
+/* ขยับเฉพาะเนื้อหาภายใน */
+.hero-content {
+    padding-top: 100px; /* ขยับเนื้อหาลงมา */
+    
+}
+
+/* ปรับปุ่ม */
+.hero-content .btn {
+    margin-top: 20px; /* ขยับปุ่มลง */
+}
+
+
 
 /* Overlay */
 .hero::before {
