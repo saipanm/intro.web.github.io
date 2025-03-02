@@ -1,3 +1,5 @@
+
+
 /* Transparent Navbar */
 .navbar {
     background-color: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent black */
@@ -5,6 +7,11 @@
     width: 100%;
     z-index: 10;
     transition: background-color 0.3s ease-in-out;
+}
+
+/* hamburgur */
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 30 30\'%3e%3cpath stroke=\'rgba%28255, 255, 255, 1%29\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3e%3c/svg%3e");
 }
 
 /* Change to solid background when scrolling */
@@ -25,6 +32,24 @@
     color: white !important;
 }
 
+/* ปุ่ม download */
+.custom-btn {
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white; /* เปลี่ยนพื้นหลังปุ่ม download */
+    color: black; /* เปลี่ยนสีข้อความในปุ่ม */
+    border: 2px solid #000; /* สีกรอบปุ่ม */
+  }
+  
+  /* point download button */
+  .custom-btn:hover {
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #737a8f; 
+    color: rgb(255, 255, 255);
+    border: 2px solid #000; 
+  }
+  
 
 /*.hero-content */
 @font-face {
@@ -51,7 +76,7 @@
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('../assets/images/l.jpg') no-repeat left top;
+    background: url('../assets/images/bg3.jpg') no-repeat left top;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -72,6 +97,20 @@
     margin-top: 20px; /* ขยับปุ่มลง */
 }
 
+/* ปุ่ม get started */
+#scroll-btn {
+    background-color: #000000; 
+    color: white; 
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* point ปุ่ม get started  */
+#scroll-btn:hover {
+    background-color: #2f3558; 
+    color: white; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
 
 
 /* Overlay */
@@ -104,22 +143,75 @@
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 30px;
+    
 }
 
-h3 {
+h2 {
     margin: 0;
-    color: #770033;
+    color: #2e7a6d;
     padding: 15px;
     margin-bottom: 20px;
+    margin-top: 30px; 
     border-radius: 5px;
 }
 
+#project h2 {
+    margin: 0;
+    color: #10006c;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 30px; 
+    border-radius: 5px;
+  }
+
+#members h2 {
+    margin: 0;
+    color: #10006c;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 30px; 
+    border-radius: 5px;
+  }
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    border-radius: 5px;
+    color: #211d52;
+  }
+  
+  p {
+    margin-bottom: 15px; 
+  }
+
+
 h4 {
-    border-radius: 10px;
-    opacity: 0.8;
-    font-size: 17px;
+    margin: 0;
+    color: #211d52;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 30px; 
+    border-radius: 5px;
 }
 
+p {
+    margin-bottom: 15px; 
+  }
+
+.custom-img {
+    display: block;
+    max-width: 100%;  
+    height: auto;    
+    margin-right: 20px; 
+  }
+
+.image-row {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px;
+    align-items: center;
+  }
 
 
 /* General Reset */
@@ -135,6 +227,7 @@ h4 {
     max-width: 1200px;
     margin: 0 auto 55px;
 }
+
 
 /* Card Styling */
 .card-list .card-item {
@@ -338,4 +431,12 @@ h4 {
     .swiper-button-next {
         display: none;
     }
+}
+
+
+.user-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }

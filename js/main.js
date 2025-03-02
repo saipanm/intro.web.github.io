@@ -48,3 +48,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
+// JavaScript to unlock scrolling when the button is clicked
+document.getElementById('scroll-btn').addEventListener('click', function() {
+  document.body.classList.remove('no-scroll'); // ลบคลาส 'no-scroll' เพื่อให้เลื่อนหน้าได้
+});
