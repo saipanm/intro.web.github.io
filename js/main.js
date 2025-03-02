@@ -48,7 +48,32 @@ window.addEventListener("scroll", function() {
   }
 });
 
+// Disable scroll initially
+document.body.classList.add('no-scroll');
+
+// Enable scroll when Get Started button is clicked
+document.getElementById('scroll-btn').addEventListener('click', function() {
+  document.body.classList.remove('no-scroll');
+  // Optionally, scroll to the Members section after enabling scroll
+  document.getElementById('members').scrollIntoView({ behavior: 'smooth' });
+});
+
 // JavaScript to unlock scrolling when the button is clicked
 document.getElementById('scroll-btn').addEventListener('click', function() {
   document.body.classList.remove('no-scroll'); // ลบคลาส 'no-scroll' เพื่อให้เลื่อนหน้าได้
 });
+
+  // รับปุ่มและ audio element
+  const toggleButton = document.getElementById('toggle-audio');
+  const audioElement = document.getElementById('background-audio');
+
+  // ตั้งค่าให้เพลงเริ่มเล่นเมื่อกดปุ่ม
+  toggleButton.addEventListener('click', function() {
+    if (audioElement.paused) {
+      audioElement.play(); // เล่นเพลง
+      toggleButton.textContent = 'Pause Music'; // เปลี่ยนข้อความปุ่มเป็น "Pause Music"
+    } else {
+      audioElement.pause(); // หยุดเพลง
+      toggleButton.textContent = 'Play Music'; // เปลี่ยนข้อความปุ่มเป็น "Play Music"
+    }
+  });

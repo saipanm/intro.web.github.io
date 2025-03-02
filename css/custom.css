@@ -1,8 +1,16 @@
 
 
+body {
+    background-color: black; /* ตั้งค่าพื้นหลังเป็นสีดำ */
+    color: white;            /* ตัวอักษรสีขาว */
+    font-family: Arial, sans-serif; /* ฟอนต์ที่ใช้ */
+    text-align: center;      /* จัดข้อความให้อยู่กลาง */
+    padding-top: 50px;       /* เพิ่มพื้นที่ด้านบน */
+}
+
 /* Transparent Navbar */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.582) !important; /* Semi-transparent black */
     position: absolute;
     width: 100%;
     z-index: 10;
@@ -49,6 +57,14 @@
     color: rgb(255, 255, 255);
     border: 2px solid #000; 
   }
+
+  /* Audio controls positioning */
+.audio-controls {
+  position: absolute;
+  top:100px;
+  right: 100px;
+  z-index: 9999;
+}
   
 
 /*.hero-content */
@@ -92,6 +108,43 @@
     padding-top: 70px; /* ขยับเนื้อหาลงมา */
     
 }
+
+/* Hero Section สำหรับหน้า Home */
+.hero-home {
+    position: relative;
+    background: url('../assets/images/bg4.jpg') no-repeat left top;
+    background-size: 100%; /* ย่อขนาดรูปลง 90% ของขนาดเดิม */
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    display: flex;
+    align-items: center; /* จัดเนื้อหาแนวตั้งให้ตรงกลาง */
+    justify-content: flex-start; /* ชิดซ้าย */
+    text-align: left;
+    padding: 20px; /* เว้นขอบรอบๆ */
+}
+
+/* ขยับเฉพาะเนื้อหาภายใน Hero Home */
+.hero-home .hero-content {
+    padding-top: 70px; /* ขยับเนื้อหาลงมา */
+    color: white; /* เปลี่ยนสีข้อความ */
+}
+
+
+/* ปรับให้ปุ่มอยู่ภายใน Hero Section */
+.hero-home .btn-primary {
+    margin-top: 20px; /* เว้นระยะจากข้อความ */
+    padding: 10px 20px; /* ขนาดปุ่ม */
+    background-color: #0c337c; /* สีพื้นหลังปุ่ม */
+    color: white; /* สีตัวอักษรของปุ่ม */
+    border: none; /* เอาขอบปุ่มออก */
+    border-radius: 5px; /* ปรับขอบปุ่มให้กลม */
+}
+
+.hero-home .btn-primary:hover {
+    background-color: #003366; /* สีปุ่มเมื่อ hover */
+    cursor: pointer;
+}
+
+
 
 /* ปรับปุ่ม */
 .hero-content .btn {
@@ -158,7 +211,7 @@ h2 {
 
 #project h2 {
     margin: 0;
-    color: #10006c;
+    color: #1f3658;
     padding: 15px;
     margin-bottom: 20px;
     margin-top: 30px; 
@@ -167,7 +220,7 @@ h2 {
 
 #members h2 {
     margin: 0;
-    color: #10006c;
+    color: #1f3658;
     padding: 15px;
     margin-bottom: 20px;
     margin-top: 30px; 
@@ -215,6 +268,12 @@ p {
   }
 
 
+  .custom-right {
+    margin-left: auto;
+    padding-left: 4 0px; 
+  }
+  
+
 /* General Reset */
 * {
     margin: 0;
@@ -228,7 +287,6 @@ p {
     max-width: 1200px;
     margin: 0 auto 55px;
 }
-
 
 /* Card Styling */
 .card-list .card-item {
@@ -494,7 +552,7 @@ p {
     user-select: none;
     border-radius: 8px;
     backdrop-filter: blur(30px);
-    background: rgba(0, 0, 0, 0.1);
+    background: #fff; /* เพิ่มพื้นหลังสีขาว */
     border: 1px solid rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     text-align: center;
@@ -512,11 +570,10 @@ p {
     padding: 4px;
 }
 
-
 /* User Description */
 .card-list .card-item .user-desc {
     font-size: 1.15rem;
-    color: #444;
+    color: #0c337c;
     font-weight: 500;
     margin: 14px 0 40px;
     text-align: center;
@@ -533,7 +590,7 @@ p {
 }
 
 .slider-wrapper .swiper-pagination-bullet-active {
-    background: #E75201;
+    background: #0c337c;
     width: 12px;
 }
 
@@ -546,18 +603,21 @@ p {
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    color: #E75201;
+    color: #0c337c;
 }
+
 
 /* Responsive Fixes */
 @media (max-width: 768px) {
     .slider-wrapper {
         margin: 0 auto 40px;
+        color: #0c337c;
     }
 
     .swiper-button-prev,
     .swiper-button-next {
         display: none;
+        color: #0c337c;
     }
 }
 
