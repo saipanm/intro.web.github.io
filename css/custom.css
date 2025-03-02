@@ -73,6 +73,7 @@
 
 
 
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -265,7 +266,7 @@ p {
     object-fit: cover;
     border-radius: 50%;
 }
-/* ขยับรูปไปทางซ้ายในเฉพาะหน้า papa.html */
+/*papa.html */
 .img-move-left {
     display: block;
     margin-left: 220px; /* ปรับค่าตามต้องการ */
@@ -275,9 +276,20 @@ p {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
+/* ปรับระยะห่างของข้อความ */
+.papa-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
 
-/* ขยับรูปไปทางซ้ายเฉพาะหน้า cream.html */
+
+
+/*cream.html */
 .img-cream-left {
     display: block;
     margin-left: 220px; /* ปรับค่าตามต้องการ */
@@ -286,9 +298,17 @@ p {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
+/* ปรับระยะห่างของข้อความ */
+.cream-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
-
-/* ขยับรูปไปทางซ้ายเฉพาะหน้า saipan.html */
+/*saipan.html */
 .img-saipan-left {
     display: block;
     margin-left: 220px; /* ปรับค่าตามต้องการ */
@@ -305,6 +325,147 @@ p {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
+/* ปรับระยะห่างของข้อความ */
+.saipan-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+    /*wawa.html */
+.img-wawa-left {
+    display: block;
+    margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+/* ปรับขนาดฟอนต์ของชื่อ */
+.profile-name{
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+/* ทำให้รูปใน wawa.html เป็นวงกลม */
+.img-earn-left{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    object-fit: cover; /* ป้องกันภาพผิดสัดส่วน */
+}
+.profile-name-name {
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+/* ปรับระยะห่างของข้อความ */
+.wawa-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* earn.html */
+.img-earn-left {
+    display: block;
+    margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+.earn-name {
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
+}
+/* ปรับระยะห่างของข้อความ */
+.earn-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* พื้นหลัง */
+.container-star {
+    background-image: url('../assets/images/H.jpg'); /* เปลี่ยนเป็นภาพที่ต้องการ */
+    background-size: cover;
+    background-position: center 0px; /* ปรับค่าให้พื้นหลังเลื่อนลง */
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: px; /* เพิ่มระยะห่างจากด้านบน */
+    min-height: 400px; /* เพิ่มความสูงของพื้นหลัง */
+    border-radius: 10px;
+    max-width: 1200px; /* กำหนดขนาดสูงสุดของพื้นหลัง */
+    
+}
+.placeholder-space {
+    margin-top: 80px; /* เพิ่มระยะห่างจากด้านบน */
+    margin-bottom: 30px; /* ลดให้ต่ำลง */
+}
+
+/* เพิ่มเลเยอร์สีดำโปร่งแสง */
+.container-star::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* ความโปร่งแสง 50% */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* ทำให้ตัวอักษรอยู่ข้างบนสุด */
+.container-star h3,
+.container-star h4 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(94, 88, 88, 0.7);
+}
+
+/* ปรับแต่งรูปภาพให้ดูสวยขึ้น */
+.img-saipan-left {
+    position: relative;
+    z-index: 2;
+    border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.img-wawa-left {
+    position: relative;
+    z-index: 2;
+    border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.img-move-left {
+    position: relative;
+    z-index: 2;
+    border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.img-earn-left {
+    position: relative;
+    z-index: 2;
+    border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.img-cream-left {
+    position: relative;
+    z-index: 2;
+    border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
 @font-face {
     font-family: 'Lora-VariableFont_wght'; /* ตั้งชื่อฟอนต์ */
     src: url('../assets/font/Lora-VariableFont_wght.ttf') format('truetype');
@@ -318,41 +479,8 @@ p {
     font-weight: bold; /* ทำให้ตัวหนา */
     color: #3c3042; 
 }
-/* ลดตำแหน่งของ ✮✮✮ ลงมา */
-.text-center {
-    margin-top: 80px; /* เพิ่มระยะห่างจากด้านบน */
-    margin-bottom: 30px; /* ลดให้ต่ำลง */
-}
 
 
-
-
-/* ขยับรูปไปทางซ้ายเฉพาะหน้า wawa.html */
-.img-wawa-left {
-    display: block;
-    margin-left: 220px; /* ปรับค่าตามต้องการ */
-}
-/* ทำให้รูปใน wawa.html เป็นวงกลม */
-.img-wawa-left {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* ทำให้เป็นวงกลม */
-    object-fit: cover; /* ป้องกันภาพผิดสัดส่วน */
-}
-.wawa-name {
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
-
-/* ขยับรูปไปทางซ้ายเฉพาะหน้า earn.html */
-.img-earn-left {
-    display: block;
-    margin-left: 220px; /* ปรับค่าตามต้องการ */
-}
-.earn-name {
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
 
 /* จัดให้ card-item อยู่ตรงกลาง */
 .card-list .card-item {
