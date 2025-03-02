@@ -183,6 +183,17 @@ h4 {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
+/* ปรับระยะห่างของข้อความ */
+.papa-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
 
 
 /*cream.html */
@@ -194,7 +205,15 @@ h4 {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
-
+/* ปรับระยะห่างของข้อความ */
+.cream-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
 /*saipan.html */
 .img-saipan-left {
@@ -213,12 +232,26 @@ h4 {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
+/* ปรับระยะห่างของข้อความ */
+.saipan-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
 
     /*wawa.html */
 .img-wawa-left {
     display: block;
     margin-left: 220px; /* ปรับค่าตามต้องการ */
+}
+/* ปรับขนาดฟอนต์ของชื่อ */
+.profile-name{
+    font-size: 20px; /* ปรับขนาดตามต้องการ */
+    margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
 /* ทำให้รูปใน wawa.html เป็นวงกลม */
 .img-earn-left{
@@ -231,6 +264,16 @@ h4 {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
+/* ปรับระยะห่างของข้อความ */
+.wawa-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
 
 /* earn.html */
 .img-earn-left {
@@ -241,20 +284,32 @@ h4 {
     font-size: 20px; /* ปรับขนาดตามต้องการ */
     margin-top: 20px; /* ปรับค่าตามต้องการ */
 }
+/* ปรับระยะห่างของข้อความ */
+.earn-text {
+    padding-top: 80px; /* ปรับค่าตามต้องการ */
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
 /* พื้นหลัง */
-/* กำหนดพื้นหลังเฉพาะ container ที่มีดาว */
 .container-star {
     background-image: url('../assets/images/H.jpg'); /* เปลี่ยนเป็นภาพที่ต้องการ */
     background-size: cover;
     background-position: center 0px; /* ปรับค่าให้พื้นหลังเลื่อนลง */
     background-repeat: no-repeat;
     position: relative;
-    padding: px; /* เพิ่ม padding เพื่อให้เนื้อหาขยับลง */
-    margin-top: 50px; /* เพิ่มระยะห่างจากด้านบน */
+    margin-top: px; /* เพิ่มระยะห่างจากด้านบน */
     min-height: 400px; /* เพิ่มความสูงของพื้นหลัง */
     border-radius: 10px;
     max-width: 1200px; /* กำหนดขนาดสูงสุดของพื้นหลัง */
+    
+}
+.placeholder-space {
+    margin-top: 80px; /* เพิ่มระยะห่างจากด้านบน */
+    margin-bottom: 30px; /* ลดให้ต่ำลง */
 }
 
 /* เพิ่มเลเยอร์สีดำโปร่งแสง */
@@ -285,32 +340,38 @@ h4 {
     position: relative;
     z-index: 2;
     border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .img-wawa-left {
     position: relative;
     z-index: 2;
     border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .img-move-left {
     position: relative;
     z-index: 2;
     border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .img-earn-left {
     position: relative;
     z-index: 2;
     border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .img-cream-left {
     position: relative;
     z-index: 2;
     border: 4px solid white;
+    margin-top: 100px; /* ปรับค่าตามต้องการ */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 @font-face {
     font-family: 'Lora-VariableFont_wght'; /* ตั้งชื่อฟอนต์ */
@@ -325,18 +386,6 @@ h4 {
     font-weight: bold; /* ทำให้ตัวหนา */
     color: #3c3042; 
 }
-/* ลดตำแหน่งของ ✮✮✮ ลงมา */
-.text-center {
-    margin-top: 80px; /* เพิ่มระยะห่างจากด้านบน */
-    margin-bottom: 30px; /* ลดให้ต่ำลง */
-}
-/* เปลี่ยนสีของดาว */
-.container-star h3 {
-    color: gold; /* เปลี่ยนเป็นสีทอง */
-    font-size: 32px; /* ปรับขนาดได้ตามต้องการ */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้ดูมีมิติ */
-}
-
 
 
 
