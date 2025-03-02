@@ -32,24 +32,61 @@
     color: white !important;
 }
 
-/* ปุ่ม download */
-.custom-btn {
-    font-size: 25px;
-    font-weight: bold;
-    background-color: white; /* เปลี่ยนพื้นหลังปุ่ม download */
-    color: black; /* เปลี่ยนสีข้อความในปุ่ม */
-    border: 2px solid #000; /* สีกรอบปุ่ม */
-  }
-  
-  /* point download button */
-  .custom-btn:hover {
-    font-size: 25px;
-    font-weight: bold;
-    background-color: #737a8f; 
-    color: rgb(255, 255, 255);
-    border: 2px solid #000; 
-  }
-  
+
+
+.custom-btn-download {
+    margin-left: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+}
+/* โหลดฟอนต์ Acme-Regular */
+@font-face {
+    font-family: 'Acme-Regular';
+    src: url('../assets/font/Acme-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ปรับขนาดปุ่มให้เท่ากัน */
+.custom-btn-project,
+.custom-btn-download {
+    font-family: 'Acme-Regular', sans-serif !important;
+    font-size: 20px; /* ให้ขนาดตัวอักษรเท่ากัน */
+    padding: 12px 30px; /* กำหนด padding เท่ากัน */
+    min-width: 160px; /* ป้องกันขนาดปุ่มไม่เท่ากัน */
+    height: 50px; /* กำหนดความสูงให้เหมือนกัน */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px; /* ทำให้ขอบมนเท่ากัน */
+}
+
+/* ปรับสีของปุ่ม */
+.custom-btn-project {
+    background-color: #493D9E !important; /* สีม่วงเข้ม */
+    color: white !important;
+    border: none;
+}
+
+/* ปรับสีของปุ่ม Download */
+.custom-btn-download {
+    background-color: #DAD2FF !important; /* สีม่วงอ่อน */
+    color: #124C5F !important;
+    border: none;
+}
+
+/* เพิ่ม margin ระหว่างปุ่มให้เท่ากัน */
+.navbar .custom-btn-project {
+    margin-right: 10px;
+}
+
+/* ปรับเมนู Navbar (Home, About, Contact) ให้ใช้ฟอนต์ Acme-Regular */
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Acme-Regular', sans-serif !important;
+    font-size: 20px; /* ปรับขนาดให้เท่ากับปุ่ม */
+    color: white !important; /* ให้เป็นสีขาว */
+    padding: 10px 15px; /* ปรับขนาด padding */
+}
+
 
 /*.hero-content */
 @font-face {
