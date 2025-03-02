@@ -10,9 +10,18 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Custom CSS to prevent scroll initially   -->
+  <style>
+    body.no-scroll {
+      overflow: hidden;
+    }
+  </style>
+
 </head>
 <body>
 
+<<<<<<< HEAD
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container">
@@ -36,6 +45,29 @@
         <li class="nav-item">
           <a class="nav-link btn custom-btn-project" href="project.html">Project</a>
         </li>
+=======
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Member Web-App Group 6</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project.html">Project</a>
+          </li>
+        </ul>
+>>>>>>> c387a9a90455c26f0f4c63b9fe090e237ee01c18
         <div class="d-none d-lg-block">
           <a href="#" class="btn custom-btn-download">Download</a>
         </div>
@@ -50,136 +82,17 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-7">
-        <!-- ใส่ .hero-content เพื่อจัดการสไตล์ -->
         <div class="hero-content">
           <h1 class="display-4">We are Dream Team</h1>
           <h2 class="display-4">A team unrestricted by any limits</h2>
-          <p>dreamteam gogy scream come here George ahhhhhh snapmap oh dream.</p>
-          <a href="#project" class="btn btn-primary" id="scroll-btn">Get Started</a>
+          <a href="landing.html" class="btn btn-primary" id="scroll-btn">Get Started</a>
         </div>
       </div>
     </div>
   </div>
+  <audio class="audio-controls" controls autoplay src="halloween.mp3">
+  </audio>
 </div>
-
-<!-- project section -->
-<section id="project">
-  <div class="container">
-    <h2 class="text-center">Our Application</h2>
-
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img src="assets/images/homeapp.jpg" alt="" class="custom-img" width="200" height="270">
-        </div>
-        <div class="col-12 col-md-8">
-          <h3>Tic Tac Stack</h3>
-          <p>Tic-Tac-Stack คือการพลิกโฉมเกม XO ให้กลายเป็นเกมกลยุทธ์ที่มีมิติและสนุกกว่าที่เคย ถ้าคุณกำลังมองหาเกมที่เรียนรู้ง่าย แต่เล่นลึก และมีศักยภาพในการพัฒนาสมอง นี่คือเกมที่คุณควรจับตา! เราขอเชิญทุกคนเข้าร่วมทดสอบ Demo และเป็นส่วนหนึ่งของเกมที่กำลังจะเปลี่ยนวิธีเล่น XO ไปตลอดกาล!</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-12 col-md-8">
-          <h3>Choose mode</h3>
-          <p>Normal Mode เป็นโหมดการเล่นแบบใช้กติกาพื้นฐานแบบดั้งเดิม</p>
-          <p>Rush Mode โหมดที่ต้องวางตัวละครภายใน 3 วินาที ถ้าไม่ทันภายในเวลาที่กำหนด จะสลับเป็นเทิร์นของฝ่ายตรงข้ามทันที</p>
-          <p>Fancy Mode โหมดสุดปั่น ที่มีเหตุการณ์สุ่ม เช่น สลับตำแหน่งตัวละครทั้งหมด หรือแลกตัวละครที่เหลืออยู่กับฝ่ายตรงข้าม</p>
-        </div>
-        
-        <div class="col-12 col-md-4">
-          <img src="assets/images/mode.jpg" alt="Tic Tac Stack" class="custom-img" width="200" height="270">
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-12 col-md-8">
-          <h3>Little Ghost Charactor</h3>
-        </div>
-          
-          <div class="image-row">
-            <img src="assets/images/yellow.jpg" alt="Yellow" class="custom-img" width="200" height="270">
-            <img src="assets/images/red.jpg" alt="Red" class="custom-img" width="200" height="270">
-            <img src="assets/images/green.jpg" alt="Green" class="custom-img" width="200" height="270">
-          </div>
-          <div class="image-row">
-            <img src="assets/images/blue.jpg" alt="Blue" class="custom-img" width="200" height="270">
-            <img src="assets/images/purple.jpg" alt="Purple" class="custom-img" width="200" height="270">
-            <img src="assets/images/pink.jpg" alt="Pink" class="custom-img" width="200" height="270">
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-4">
-      <img src="assets/images/level.jpg" alt="" class="custom-img" width="500" height="500">
-    </div>
-  </div>
-</div>
-
-<!-- Members Section -->
-<section id="members">
-  <div class="container">
-    <h2 class="text-center">Our Members</h2>
-
-    <div class="container swiper">
-      <div class="slider-wrapper">
-        <div class="card-list swiper-wrapper">
-
-          <div class="card-item swiper-slide">
-            <a href="saipan.html">
-                <img src="assets/images/saipan-2.jpg" alt="User image" class="user-image">
-                <h3 class="user-name">Saipan</h3>
-                <p class="user-desc">66010464</p>
-              </a>
-          </div>
-
-
-          <div class="card-item swiper-slide">
-            <a href="cream.html">
-              <img src="assets/images/cream-1.jpg" alt="User image" class="user-image">
-              <h3 class="user-name">Cream</h3>
-              <p class="user-desc">66010870</p>
-            </a>
-          </div>
-
-          <div class="card-item swiper-slide">
-            <a href="earn.html">
-              <img src="assets/images/earn-2.jpg" alt="User image" class="user-image">
-              <h3 class="user-name">Earn</h3>
-              <p class="user-desc">66010495</p>
-            </a>
-          </div>
-
-          <div class="card-item swiper-slide">
-            <a href="wawa.html">
-              <img src="assets/images/wawa-2.jpg" alt="User image" class="user-image">
-              <h3 class="user-name">Vava</h3>
-              <p class="user-desc">66010129</p>
-            </a>
-          </div>
-
-          <div class="card-item swiper-slide">
-            <a href="papa.html">
-              <img src="assets/images/papa.jpg" alt="User image" class="user-image">
-              <h3 class="user-name">Tata</h3>
-              <p class="user-desc">66010570</p>
-            </a>
-          </div>
-
-        </div> <!-- Closing swiper-wrapper -->
-
-        <!-- Swiper Pagination & Navigation -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div> <!-- Fixed class -->
-        <div class="swiper-button-next"></div> <!-- Fixed class -->
-      </div> <!-- Closing slider-wrapper -->
-    </div> <!-- Closing Swiper container -->
-  </div>
-</section>
 
     <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
