@@ -48,6 +48,15 @@ window.addEventListener("scroll", function() {
   }
 });
 
+// ตรวจสอบเมื่อกดปุ่ม hamburger
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbar = document.querySelector('.navbar');
+
+// เมื่อคลิกที่ปุ่ม hamburger
+navbarToggler.addEventListener('click', function() {
+    navbar.classList.toggle('open');
+});
+
 // Disable scroll initially
 document.body.classList.add('no-scroll');
 
@@ -77,3 +86,4 @@ document.getElementById('scroll-btn').addEventListener('click', function() {
       toggleButton.textContent = 'Play Music'; // เปลี่ยนข้อความปุ่มเป็น "Play Music"
     }
   });
+

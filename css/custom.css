@@ -4,13 +4,18 @@ body {
     color: white; /* เปลี่ยนสีตัวอักษรเป็นสีขาวเพื่อให้คอนเทนต์อ่านง่าย */
 }
 
-/* Transparent Navbar */
+/* Navbar ปกติ (ไม่มีสีพื้นหลัง) */
 .navbar {
-    background-color: rgb(0, 0, 0) !important; /* Semi-transparent black */
+    background-color: transparent !important; /* ไม่มีพื้นหลัง */
     position: absolute;
     width: 100%;
     z-index: 10;
     transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar เมื่อเปิดเมนู (เพิ่มคลาส 'open') */
+.navbar.open {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* สีดำโปร่งใส */
 }
 
 /* hamburgur */
@@ -71,11 +76,28 @@ body {
     border: none;
 }
 
+/* เปลี่ยนสีปุ่ม Project เมื่อ hover */
+.custom-btn-project:hover {
+    background-color: #6456D9 !important; /* เพิ่ม !important เพื่อให้มั่นใจว่าใช้สีนี้ */
+    color: white !important; /* เพิ่ม !important เพื่อให้สีข้อความเปลี่ยน */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 /* ปรับสีของปุ่ม Download */
 .custom-btn-download {
     background-color: #DAD2FF !important; /* สีม่วงอ่อน */
     color: #124C5F !important;
     border: none;
+}
+
+/* เปลี่ยนสีปุ่ม Download เมื่อ hover */
+.custom-btn-download:hover {
+    background-color: #C1B9FF !important; /* เพิ่ม !important เพื่อให้มั่นใจว่าใช้สีนี้ */
+    color: #124C5F !important; /* เพิ่ม !important เพื่อให้สีข้อความเปลี่ยน */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* เพิ่ม margin ระหว่างปุ่มให้เท่ากัน */
@@ -90,6 +112,7 @@ body {
     color: white !important; /* ให้เป็นสีขาว */
     padding: 10px 15px; /* ปรับขนาด padding */
 }
+
 
 
 /*.hero-content */
@@ -153,18 +176,29 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
-/* Hero Home Section*/
+
+/* Hero Home Section */
 .hero-home {
     position: relative;
-    background: url('../assets/images/bg4.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
+    background: url('../assets/images/pag1.png') no-repeat center center;
+    background-size: cover; /* ทำให้รูปขยายหรือย่อโดยรักษาสัดส่วน */
+    background-position: center; /* ควบคุมตำแหน่งของภาพให้ตรงกลาง */
+    height: 100vh; /* ความสูงของ hero section จะเท่ากับความสูงของ viewport */
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
     padding: 20px;
 }
+
+/* ให้รูปขยายเต็มพื้นที่ในหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .hero-home {
+        background-size: contain; /* ใช้ contain สำหรับหน้าจอเล็ก เพื่อไม่ให้รูปถูกตัด */
+        height: auto; /* ปรับความสูงให้เป็นอัตโนมัติ */
+    }
+}
+
 
 @font-face {
     font-family: 'Creepster'; /* ตั้งชื่อฟอนต์ */
@@ -173,25 +207,29 @@ body {
     font-style: normal;
 }
 
-.hero-home .hero-content h1,
-.hero-home .hero-content h2 {
-    font-family: 'Creepster', sans-serif; /* ใช้ฟอนต์ Creepster สำหรับ h1 และ h2 */
-    color: rgb(0, 0, 0); /* กำหนดสีตัวอักษร */
+/* กำหนดฟอนต์จากไฟล์ TTF */
+@font-face {
+    font-family: 'DenkOne-Regular'; /* ตั้งชื่อฟอนต์ */
+    src: url('../assets/font/DenkOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* ปรับขนาดและรูปแบบตัวอักษร */
+
+/* เปลี่ยนฟอนต์เฉพาะ h1 ใน .hero-content */
 .hero-home .hero-content h1 {
-    font-size: 60px; /* ขนาดฟอนต์ของ h1 */
+    font-family: 'DenkOne-Regular', sans-serif; /* ฟอนต์ที่ใช้ใน h1 */
+    font-size: 60px;
+    color: rgb(255, 255, 255); /* กำหนดสีข้อความ */
 }
 
+/* เปลี่ยนฟอนต์เฉพาะ h2 ใน .hero-content */
 .hero-home .hero-content h2 {
-    font-size: 50px; /* ขนาดฟอนต์ของ h2 */
+    font-family: 'DenkOne-Regular', sans-serif; /* ฟอนต์ที่ใช้ใน h2 */
+    font-size: 40px; /* กำหนดขนาดตัวอักษร */
+    color: rgb(255, 255, 255); /* กำหนดสีข้อความ */
 }
 
-.hero-home .hero-content p {
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-}
 
 /* ปรับสไตล์ปุ่ม */
 .btn-primary-home {
@@ -282,13 +320,15 @@ h2 {
     border-radius: 5px;
   }
 
-h3 {
+  h3 {
     font-size: 30px;
     margin-bottom: 20px;
-    margin-top: 20px; 
+    margin-top: 20px;
+    margin-left: 0; /* ทำให้ชิดขอบซ้าย */
     border-radius: 5px;
     color: #211d52;
-  }
+    text-align: left; /* ตั้งค่าให้ข้อความอยู่ด้านซ้าย */
+}
   
   p {
     margin-bottom: 15px; 
@@ -313,22 +353,10 @@ p {
     display: block;
     width: 100%; /* ทำให้รูปขยายเต็มความกว้างของ parent element */
     height: auto; /* คงอัตราส่วนการยืดของรูปภาพ */
-    max-width: 400px; /* กำหนดขนาดสูงสุดของรูปภาพ */
+    max-width: 900px; /* กำหนดขนาดสูงสุดของรูปภาพ */
+    margin-top: 30px;
 }
 
-/* เมื่อหน้าจอเล็กลง (เช่น ขนาดจอเล็กกว่า 768px) */
-@media (max-width: 768px) {
-    .custom-img {
-        max-width: 300px; /* ลดขนาดสูงสุดของรูปภาพ */
-    }
-}
-
-/* เมื่อหน้าจอเล็กกว่า 480px */
-@media (max-width: 480px) {
-    .custom-img {
-        max-width: 200px; /* ลดขนาดสูงสุดของรูปภาพอีก */
-    }
-}
 
 .custom-font-h3 {
     font-family: 'Bevan', cursive; 
@@ -428,125 +456,114 @@ p {
     object-fit: cover;
     border-radius: 50%;
 }
+
 /*papa.html */
-.img-move-left {
+.img-papa-left {
+    width: 100%; /* ปรับให้เต็มขนาดคอลัมน์ */
+    max-width: 200px; /* จำกัดขนาดสูงสุด */
+    height: auto; /* ปรับอัตราส่วนอัตโนมัติ */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
     display: block;
-    margin-left: 220px; /* ปรับค่าตามต้องการ */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
-/* ปรับขนาดฟอนต์ของชื่อ */
-.papa-name {
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
-/* ปรับระยะห่างของข้อความ */
+
+/* ปรับข้อความด้านขวาให้ Responsive */
 .papa-text {
-    padding-top: 80px; /* ปรับค่าตามต้องการ */
-    margin-top: 20px;
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center; /* จัดให้อยู่กึ่งกลาง */
 }
 
-
+@media (min-width: 768px) {
+    .papa-text {
+        text-align: left; /* กลับไปชิดซ้ายเมื่อจอใหญ่ */
+    }
+}
 
 
 /*cream.html */
 .img-cream-left {
+    width: 100%; /* ปรับให้เต็มขนาดคอลัมน์ */
+    max-width: 200px; /* จำกัดขนาดสูงสุด */
+    height: auto; /* ปรับอัตราส่วนอัตโนมัติ */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
     display: block;
-    margin-left: 220px; /* ปรับค่าตามต้องการ */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
-.cream-name {
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
-/* ปรับระยะห่างของข้อความ */
+
+/* ปรับข้อความด้านขวาให้ Responsive */
 .cream-text {
-    padding-top: 80px; /* ปรับค่าตามต้องการ */
-    margin-top: 20px;
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center; /* จัดให้อยู่กึ่งกลาง */
 }
+
+@media (min-width: 768px) {
+    .cream-text {
+        text-align: left; /* กลับไปชิดซ้ายเมื่อจอใหญ่ */
+    }
+}
+
 
 /*saipan.html */
 .img-saipan-left {
-    display: block;
-    margin-left: 220px; /* ปรับค่าตามต้องการ */
-}
-/* ทำให้รูปใน saipan.html เป็นวงกลม */
-.img-saipan-left {
-    width: 200px;
-    height: 200px;
+    width: 100%; /* ปรับให้เต็มขนาดคอลัมน์ */
+    max-width: 200px; /* จำกัดขนาดสูงสุด */
+    height: auto; /* ปรับอัตราส่วนอัตโนมัติ */
     border-radius: 50%; /* ทำให้เป็นวงกลม */
-    object-fit: cover; /* ป้องกันภาพผิดสัดส่วน */
+    display: block;
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
-/* ปรับขนาดฟอนต์ของชื่อ */
-.saipan-name {
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
-/* ปรับระยะห่างของข้อความ */
+
+/* ปรับข้อความด้านขวาให้ Responsive */
 .saipan-text {
-    padding-top: 80px; /* ปรับค่าตามต้องการ */
-    margin-top: 20px;
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center; /* จัดให้อยู่กึ่งกลาง */
+}
+
+@media (min-width: 768px) {
+    .saipan-text {
+        text-align: left; /* กลับไปชิดซ้ายเมื่อจอใหญ่ */
+    }
 }
 
 
-    /*wawa.html */
+/*wawa.html */
 .img-wawa-left {
-    display: block;
-    margin-left: 220px; /* ปรับค่าตามต้องการ */
-}
-/* ปรับขนาดฟอนต์ของชื่อ */
-.profile-name{
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
-/* ทำให้รูปใน wawa.html เป็นวงกลม */
-.img-earn-left{
-    width: 200px;
-    height: 200px;
+    width: 100%; /* ปรับให้เต็มขนาดคอลัมน์ */
+    max-width: 200px; /* จำกัดขนาดสูงสุด */
+    height: auto; /* ปรับอัตราส่วนอัตโนมัติ */
     border-radius: 50%; /* ทำให้เป็นวงกลม */
-    object-fit: cover; /* ป้องกันภาพผิดสัดส่วน */
+    display: block;
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
-.profile-name-name {
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
-/* ปรับระยะห่างของข้อความ */
+
+/* ปรับข้อความด้านขวาให้ Responsive */
 .wawa-text {
-    padding-top: 80px; /* ปรับค่าตามต้องการ */
-    margin-top: 20px;
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center; /* จัดให้อยู่กึ่งกลาง */
+}
+
+@media (min-width: 768px) {
+    .wawa-text {
+        text-align: left; /* กลับไปชิดซ้ายเมื่อจอใหญ่ */
+    }
 }
 
 
 /* earn.html */
 .img-earn-left {
+    width: 100%; /* ปรับให้เต็มขนาดคอลัมน์ */
+    max-width: 200px; /* จำกัดขนาดสูงสุด */
+    height: auto; /* ปรับอัตราส่วนอัตโนมัติ */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
     display: block;
-    margin-left: 220px; /* ปรับค่าตามต้องการ */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
-.earn-name {
-    font-size: 20px; /* ปรับขนาดตามต้องการ */
-    margin-top: 20px; /* ปรับค่าตามต้องการ */
-}
-/* ปรับระยะห่างของข้อความ */
+
+/* ปรับข้อความด้านขวาให้ Responsive */
 .earn-text {
-    padding-top: 80px; /* ปรับค่าตามต้องการ */
-    margin-top: 20px;
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center; /* จัดให้อยู่กึ่งกลาง */
+}
+
+@media (min-width: 768px) {
+    .earn-text {
+        text-align: left; /* กลับไปชิดซ้ายเมื่อจอใหญ่ */
+    }
 }
 
 /* พื้นหลัง */
@@ -774,3 +791,105 @@ p {
     background-color: #666; /* เปลี่ยนสีของ slider volume */
 }
 
+#choose {
+    background: linear-gradient(to right, #493D9E, #DAD2FF); /* ไล่สีจากสีม่วงเข้มไปสีม่วงอ่อน */
+    padding: 50px 0; /* เพิ่ม padding บนและล่าง */
+}
+
+
+
+/* เพิ่มระยะห่างระหว่างหัวข้อ "Character level" กับแถวของรูปภาพ */
+.container .row .col-12 .image-row {
+    margin-top: 5px; /* เพิ่มระยะห่างระหว่างหัวข้อกับรูปภาพ */
+}
+
+
+/* เพิ่มฟอนต์ของหัวข้อ "Character level" */
+@font-face {
+    font-family: 'Bevan-Regular';
+    src: url('../assets/font/Bevan-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* หัวข้อ "Character Level" พร้อมขีดเส้นใต้ */
+.title-with-underline {
+    color: #ffffff; /* สีขาว */
+    font-family: 'Bevan-Regular', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* ระยะห่างระหว่างตัวอักษรกับเส้น */
+}
+
+.title-with-underline::after {
+    content: "";
+    display: block;
+    width: 250px; /* ความยาวเส้น */
+    height: 4px; /* ความหนาของเส้น */
+    background-color: #493D9E; /* สีม่วง */
+    margin: 0 auto;
+    border-radius: 2px; /* ทำให้เส้นมน */
+}
+
+/* Star */
+.custom-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.stars {
+    font-size: 24px; /* ขนาดดาว */
+    margin-top: 10px; /* ระยะห่างระหว่างรูปกับดาว */
+    text-align: center;
+}
+
+/* ปรับขนาดและสีของข้อความ Level */
+.character-title {
+    font-size: 22px;
+    color: white; /* สีขาว */
+    font-family: 'Bevan-Regular', sans-serif;
+    margin-top: 10px; /* เพิ่มระยะห่างจากดาว */
+}
+
+/* สไตล์สำหรับข้อความใหม่ */
+.new-section-title {
+    font-size: 28px;
+    color: white; /* สีขาว */
+    font-family: 'SourceSerifPro-Regular', sans-serif;
+    margin-top: 0px; /* เพิ่มระยะห่างจากชุดรูปภาพ */
+}
+
+/* Charactor Section */
+#charactor {
+    padding: 50px 0; /* เพิ่มพื้นที่บนและล่าง */
+
+}
+
+/* Heading */
+#charactor h2 {
+    font-family: 'DenkOne-Regular', sans-serif; /* ฟอนต์สำหรับหัวข้อ */
+    color: #493D9E; /* สีฟอนต์ */
+    font-size: 36px; /* ขนาดฟอนต์ */
+    margin-bottom: 30px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+/* สไตล์สำหรับ swiper */
+.swiper {
+    position: relative;
+}
+
+/* สไตล์ของ wrapper */
+.slider-wrapper {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งเนื้อหาให้ตรงกลาง */
+}
+
+
+.custom-charactor-image {
+    width: 100%; /* รูปภาพเต็มความกว้างของการ์ด */
+    height: 100%; /* รูปภาพเต็มความสูงของการ์ด */
+    object-fit: cover; /* ปรับขนาดให้พอดีกับกรอบ */
+    border-radius: 8px;
+}

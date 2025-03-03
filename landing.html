@@ -17,72 +17,78 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <!-- ปิดการแสดงชื่อเว็บ (แสดงได้ถ้าต้องการ) -->
-        <!-- <a class="navbar-brand" href="index.html">Member Web-App Group 6</a> -->
+       <!-- เพิ่มรูปที่มุมซ้าย -->
+       <a class="navbar-brand" href="index.html">
+        <img src="assets/images/pumpkin.png" alt="Logo" style="width: 197px; height: 80px; margin-right: 10px;">
+      </a>
+      <!-- ปิดการแสดงชื่อเว็บ (แสดงได้ถ้าต้องการ) -->
+      <!-- <a class="navbar-brand" href="index.html">Member Web-App Group 6</a> -->
   
-        <!-- Toggle Button สำหรับมือถือ -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Toggle Button สำหรับมือถือ -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
   
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link custom-btn-project" href="project.html">Project</a>
-            </li>
-        </ul>      
-  
-            <!-- ปุ่ม Download -->
-            <div class="d-none d-lg-block">
-                <a href="#" class="btn custom-btn-download">
-                    <i class="btn-icon bi-cloud-download"></i>
-                    <span>Download</span>
-                </a>
-            </div>
-  
-            <!-- ปุ่ม Download สำหรับมือถือ -->
-            <div class="d-lg-none mt-2 text-center">
-                <a href="#" class="btn custom-btn-download w-100">
-                    <i class="btn-icon bi-cloud-download"></i>
-                    <span>Download</span>
-                </a>
-            </div>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-btn-project" href="#project">Project</a>
+          </li>
+        </ul>  
+        
+        <!-- ปุ่ม Download สำหรับ Desktop -->
+        <div class="d-none d-lg-block">
+          <a href="#" class="btn custom-btn-download">
+            <i class="btn-icon bi-cloud-download"></i>
+            <span>Download</span>
+          </a>
         </div>
+  
+        <!-- ปุ่ม Download สำหรับมือถือ -->
+        <div class="d-lg-none mt-2 text-center">
+          <a href="#" class="btn custom-btn-download w-100">
+            <i class="btn-icon bi-cloud-download"></i>
+            <span>Download</span>
+          </a>
+        </div>
+      </div>
     </div>
   </nav>
-
-<!-- Hero Home Section -->
-<div class="hero-home">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-7">
-        <div class="hero-content">
-          <h1 class="display-4">We are Dream Team</h1>
-          <h2 class="display-4">A team unrestricted by any limits</h2>
-          <p>dreamteam gogy scream come hear George ahhhhh snapmap oh dream.</p>
-          <a href="#project" class="btn btn-primary-home" id="scroll-btn">Get Started</a>
+  
+  
+  <!-- Hero Section -->
+  <div class="hero-home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <!-- ใส่ .hero-content เพื่อจัดการสไตล์ -->
+          <div class="hero-content">
+            <h1 class="display-4">We are Dream Team</h1>
+            <h2 class="display-4">A team unrestricted by any limits</h2>
+            <p>dreamteam gogy scream come here George ahhhhhh snapmap oh dream.</p>
+            <a href="#members" class="btn btn-primary" id="scroll-btn">Get Started</a> <!-- ปุ่ม Get Started -->
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 <!-- Members Section -->
 <section id="members">
     <div class="container">
-      <h2 class="text-center">Our Members</h2>
+      <h2 class="title-with-underline">Our Members</h2>
   
       <div class="container swiper">
         <div class="slider-wrapper">
@@ -155,44 +161,109 @@
             </div>
         </div>
     </div>
-    
-    
+
+<!-- Charactors Section -->
+<section id="charactor">
+    <div class="container">
+    <h3 class="title-with-underline">Little Ghost Charactor</h3>
+
+      <div class="container swiper">
+        <div class="slider-wrapper">
+          <div class="custom-card-list swiper-wrapper">
+  
+            <div class="custom-card-item swiper-slide">
+                  <img src="assets/images/purple .png" alt="" class="custom-charactor-image">
+                </a>
+            </div>
+            
+            <div class="custom-card-item swiper-slide">
+                <img src="assets/images/pink .png" alt="" class="custom-charactor-image">
+              </a>
+            </div>
+
+            <div class="custom-card-item swiper-slide">
+                <img src="assets/images/blue .png" alt="" class="custom-charactor-image">
+              </a>
+             </div>
+
+             <div class="custom-card-item swiper-slide">
+                 <img src="assets/images/red .png" alt="" class="custom-charactor-image">
+                </a>
+             </div>
+
+             <div class="custom-card-item swiper-slide">
+                <img src="assets/images/yellow .png" alt="" class="custom-charactor-image">
+               </a>
+            </div>
+
+            <div class="custom-card-item swiper-slide">
+                <img src="assets/images/green.png" alt="" class="custom-charactor-image">
+               </a>
+            </div>
+          <!-- Swiper Pagination & Navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div> <!-- Fixed class -->
+          <div class="swiper-button-next"></div> <!-- Fixed class -->
+        </div> <!-- Closing slider-wrapper -->
+      </div> <!-- Closing Swiper container -->
+    </div>
+  </section>
+
+<!--choose mode section -->
+<section id="choose">
     <div class="container mt-5">
       <div class="row">
         <div class="col-12 col-md-8 custom-right">
-          <h3>Choose mode</h3>
-          <p>Normal Mode เป็นโหมดการเล่นแบบใช้กติกาพื้นฐานแบบดั้งเดิม</p>
-          <p>Rush Mode โหมดที่ต้องวางตัวละครภายใน 3 วินาที ถ้าไม่ทันภายในเวลาที่กำหนด จะสลับเป็นเทิร์นของฝ่ายตรงข้ามทันที</p>
-          <p>Fancy Mode โหมดสุดปั่น ที่มีเหตุการณ์สุ่ม เช่น สลับตำแหน่งตัวละครทั้งหมด หรือแลกตัวละครที่เหลืออยู่กับฝ่ายตรงข้าม</p>
+          <h3 class="custom-font-h3">Choose mode</h3>
+          <p class="custom-font-p">Normal Mode เป็นโหมดการเล่นแบบใช้กติกาพื้นฐานแบบดั้งเดิม</p>
+          <p class="custom-font-p">Rush Mode โหมดที่ต้องวางตัวละครภายใน 3 วินาที ถ้าไม่ทันภายในเวลาที่กำหนด จะสลับเป็นเทิร์นของฝ่ายตรงข้ามทันที</p>
+          <p class="custom-font-p">Fancy Mode โหมดสุดปั่น ที่มีเหตุการณ์สุ่ม เช่น สลับตำแหน่งตัวละครทั้งหมด หรือแลกตัวละครที่เหลืออยู่กับฝ่ายตรงข้าม</p>
         </div>
         
         <div class="col-12 col-md-4">
-          <img src="assets/images/mode.jpg" alt="Tic Tac Stack" class="custom-img" width="200" height="270">
+          <img src="assets/images/page3.png" alt="Tic Tac Stack"  class="custom-img" >
         </div>
       </div>
     </div>
+</section>
     
     
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <h3 class="title-with-underline">Character Level</h3>
+      </div>  
 
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-12 col-md-8">
-          <h3>Little Ghost Charactors with 3 Level</h3>
+      <div class="row justify-content-center">
+        <!-- รูปที่ 1 -->
+        <div class="col-4 text-center">
+          <img src="assets/images/001.jpg" alt="1" class="custom-img" width="200" height="270">
+          <div class="stars">⭐</div>
+          <h4 class="character-title">Level 1</h4> 
         </div>
-          
-          <div class="image-row">
-            <img src="assets/images/yellow.jpg" alt="Yellow" class="custom-img" width="200" height="270">
-            <img src="assets/images/red.jpg" alt="Red" class="custom-img" width="200" height="270">
-            <img src="assets/images/green.jpg" alt="Green" class="custom-img" width="200" height="270">
-          </div>
-          <div class="image-row">
-            <img src="assets/images/blue.jpg" alt="Blue" class="custom-img" width="200" height="270">
-            <img src="assets/images/purple.jpg" alt="Purple" class="custom-img" width="200" height="270">
-            <img src="assets/images/pink.jpg" alt="Pink" class="custom-img" width="200" height="270">
-          </div>
+    
+        <!-- รูปที่ 2 -->
+        <div class="col-4 text-center">
+          <img src="assets/images/002.jpg" alt="2" class="custom-img" width="200" height="270">
+          <div class="stars">⭐⭐</div>
+          <h4 class="character-title">Level 2</h4> 
+        </div>
+    
+        <!-- รูปที่ 3 -->
+        <div class="col-4 text-center">
+          <img src="assets/images/003.jpg" alt="3" class="custom-img" width="200" height="270">
+          <div class="stars">⭐⭐⭐</div>
+          <h4 class="character-title">Level 3</h4> 
         </div>
       </div>
     </div>
+
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <h3 class="new-section-title">“เลเวลสูงกว่าสามารถวางทับตัวละครเลเวลต่ำกว่าของคู่แข่งเพื่อขัดขวางได้”</h3>
+      </div>
+    </div>
+  </div>
     
 
     <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->

@@ -14,38 +14,51 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Member Web-App Group 6</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Project</a>
-          </li>
-        </ul>
-        <div class="d-none d-lg-block">
-          <a href="#" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    
+    <!-- เพิ่ม ms-auto เพื่อดันปุ่มไปด้านขวา -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-btn-project" href="project.html">Project</a>
+        </li>
+      </ul>  
+      
+          <!-- ปุ่ม Download สำหรับ Desktop -->
+          <div class="d-none d-lg-block">
+            <a href="#" class="btn custom-btn-download">
               <i class="btn-icon bi-cloud-download"></i>
-              <span>Download</span><!-- duplicated above one for mobile -->
-          </a>
+              <span>Download</span>
+            </a>
+          </div>
+    
+          <!-- ปุ่ม Download สำหรับมือถือ -->
+          <div class="d-lg-none mt-2 text-center">
+            <a href="#" class="btn custom-btn-download w-100">
+              <i class="btn-icon bi-cloud-download"></i>
+              <span>Download</span>
+            </a>
+          </div>
+        </div>
       </div>
-  </div>
-</div>
-</nav>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
   <div class="container container-star mt-5">
     <div class="placeholder-space"></div> <!-- แทนที่ดาวเพื่อรักษาระยะห่าง -->
