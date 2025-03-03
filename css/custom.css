@@ -798,8 +798,19 @@ a{
     max-width: 900px; /* กำหนดขนาดสูงสุดของรูปภาพ */
     margin-top: 30px;
 }
+.custom-img-choosemode {
+    display: block;
+    width: 100%; /* ทำให้รูปขยายเต็มความกว้างของ parent element */
+    height: auto; /* คงอัตราส่วนการยืดของรูปภาพ */
+    max-width: 900px; /* กำหนดขนาดสูงสุดของรูปภาพ */
+    margin-top: 30px;
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
     .custom-img-tictac {
+        transform: scale(1.4) !important;
+    }
+    .custom-img-choosemode {
         transform: scale(1.4) !important;
     }
 }
