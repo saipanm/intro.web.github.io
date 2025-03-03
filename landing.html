@@ -14,37 +14,52 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Member Web-App Group 6</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="project.html">Project</a>
-          </li>
-        </ul>
-        <div class="d-none d-lg-block">
-          <a href="#" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
-              <i class="btn-icon bi-cloud-download"></i>
-              <span>Download</span><!-- duplicated above one for mobile -->
-          </a>
-      </div>
-  </div>
-</div>
-</nav>
-      </div>
+        <!-- ปิดการแสดงชื่อเว็บ (แสดงได้ถ้าต้องการ) -->
+        <!-- <a class="navbar-brand" href="index.html">Member Web-App Group 6</a> -->
+  
+        <!-- Toggle Button สำหรับมือถือ -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-btn-project" href="project.html">Project</a>
+            </li>
+        </ul>      
+  
+            <!-- ปุ่ม Download -->
+            <div class="d-none d-lg-block">
+                <a href="#" class="btn custom-btn-download">
+                    <i class="btn-icon bi-cloud-download"></i>
+                    <span>Download</span>
+                </a>
+            </div>
+  
+            <!-- ปุ่ม Download สำหรับมือถือ -->
+            <div class="d-lg-none mt-2 text-center">
+                <a href="#" class="btn custom-btn-download w-100">
+                    <i class="btn-icon bi-cloud-download"></i>
+                    <span>Download</span>
+                </a>
+            </div>
+        </div>
     </div>
   </nav>
 
@@ -56,7 +71,8 @@
         <div class="hero-content">
           <h1 class="display-4">We are Dream Team</h1>
           <h2 class="display-4">A team unrestricted by any limits</h2>
-          <a href="#project" class="btn btn-primary" id="scroll-btn">Get Started</a>
+          <p>dreamteam gogy scream come hear George ahhhhh snapmap oh dream.</p>
+          <a href="#project" class="btn btn-primary-home" id="scroll-btn">Get Started</a>
         </div>
       </div>
     </div>
@@ -128,16 +144,18 @@
 <section id="project">
 
     <div class="container mt-5">
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <img src="assets/images/tts.jpg" alt="" class="custom-img" width="200" height="270">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src="assets/images/tts1.png" alt="" class="custom-img">
+            </div>
+            <div class="col-12 col-md-8">
+                <h3 class="custom-font-h3">Tic Tac Stack</h3> <!-- ใช้คลาสสำหรับฟอนต์ใน h3 -->
+                <p class="custom-font-p">Tic-Tac-Stack คือการพลิกโฉมเกม XO ให้กลายเป็นเกมกลยุทธ์ที่มีมิติและสนุกกว่าที่เคย ถ้าคุณกำลังมองหาเกมที่เรียนรู้ง่าย แต่เล่นลึก และมีศักยภาพในการพัฒนาสมอง นี่คือเกมที่คุณควรจับตา! เราขอเชิญทุกคนเข้าร่วมทดสอบ Demo และเป็นส่วนหนึ่งของเกมที่กำลังจะเปลี่ยนวิธีเล่น XO ไปตลอดกาล!</p>
+                <a href="" class="btn btn-download" download>Download Now</a> <!-- ปุ่มดาวน์โหลด -->
+            </div>
         </div>
-        <div class="col-12 col-md-8">
-          <h3>Tic Tac Stack</h3>
-          <p>Tic-Tac-Stack คือการพลิกโฉมเกม XO ให้กลายเป็นเกมกลยุทธ์ที่มีมิติและสนุกกว่าที่เคย ถ้าคุณกำลังมองหาเกมที่เรียนรู้ง่าย แต่เล่นลึก และมีศักยภาพในการพัฒนาสมอง นี่คือเกมที่คุณควรจับตา! เราขอเชิญทุกคนเข้าร่วมทดสอบ Demo และเป็นส่วนหนึ่งของเกมที่กำลังจะเปลี่ยนวิธีเล่น XO ไปตลอดกาล!</p>
-        </div>
-      </div>
     </div>
+    
     
     <div class="container mt-5">
       <div class="row">

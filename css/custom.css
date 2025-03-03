@@ -1,8 +1,12 @@
 
+body {
+    background-color: #000000; /* กำหนดสีพื้นหลังเป็นสีดำ */
+    color: white; /* เปลี่ยนสีตัวอักษรเป็นสีขาวเพื่อให้คอนเทนต์อ่านง่าย */
+}
 
 /* Transparent Navbar */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent black */
+    background-color: rgb(0, 0, 0) !important; /* Semi-transparent black */
     position: absolute;
     width: 100%;
     z-index: 10;
@@ -96,6 +100,7 @@
     font-style: normal;
 }
 
+
 /* เปลี่ยนฟอนต์เฉพาะ h1 ใน .hero-content */
 .hero-content h1 {
     font-family: 'HennyPenny-Regular', sans-serif;
@@ -107,8 +112,6 @@
     font-size: 40px; /* กำหนดขนาดตัวอักษร */
     color: rgb(255, 255, 255); /* กำหนดสีข้อความ */
 }
-
-
 
 
 /* Hero Section */
@@ -150,6 +153,74 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
+/* Hero Home Section*/
+.hero-home {
+    position: relative;
+    background: url('../assets/images/bg4.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px;
+}
+
+@font-face {
+    font-family: 'Creepster'; /* ตั้งชื่อฟอนต์ */
+    src: url('../assets/font/Creepster-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero-home .hero-content h1,
+.hero-home .hero-content h2 {
+    font-family: 'Creepster', sans-serif; /* ใช้ฟอนต์ Creepster สำหรับ h1 และ h2 */
+    color: rgb(0, 0, 0); /* กำหนดสีตัวอักษร */
+}
+
+/* ปรับขนาดและรูปแบบตัวอักษร */
+.hero-home .hero-content h1 {
+    font-size: 60px; /* ขนาดฟอนต์ของ h1 */
+}
+
+.hero-home .hero-content h2 {
+    font-size: 50px; /* ขนาดฟอนต์ของ h2 */
+}
+
+.hero-home .hero-content p {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* ปรับสไตล์ปุ่ม */
+.btn-primary-home {
+    background-color: #493D9E; /* เปลี่ยนสีพื้นหลังเป็นสีใหม่ */
+    color: white; /* เปลี่ยนสีตัวอักษรให้เป็นสีขาว */
+    padding: 15px 30px; /* เพิ่มพื้นที่ภายในปุ่ม (บน-ล่าง, ซ้าย-ขวา) */
+    font-size: 1rem; /* เปลี่ยนขนาดฟอนต์ */
+    border-radius: 40px; /* ทำมุมของปุ่มให้โค้ง */
+    border: 2px solid #493D9E; /* เปลี่ยนสีขอบของปุ่มให้ตรงกับสีพื้นหลัง */
+    text-transform: uppercase; /* ทำให้ข้อความในปุ่มเป็นตัวพิมพ์ใหญ่ */
+    font-weight: bold; /* ทำให้ข้อความหนา */
+    transition: all 0.5s ease; /* เพิ่มการเคลื่อนไหวเมื่อมีการโฮเวอร์ */
+}
+
+/* ปรับสีเมื่อโฮเวอร์ปุ่ม */
+.btn-primary-home:hover {
+    background-color: #ffffff; /* เปลี่ยนพื้นหลังเป็นสีขาวเมื่อโฮเวอร์ */
+    color: #493D9E; /* เปลี่ยนสีตัวอักษรเป็นสีเดียวกับพื้นหลังของปุ่ม */
+    border: 2px solid #493D9E; /* สีขอบเมื่อโฮเวอร์ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+/* ปรับขนาดปุ่มในหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .btn-primary-home {
+        padding: 12px 25px; /* ปรับขนาดปุ่มในหน้าจอเล็ก */
+        font-size: 1rem; /* ปรับขนาดฟอนต์ */
+    }
+}
 
 /* Overlay */
 .hero::before {
@@ -237,12 +308,66 @@ p {
     margin-bottom: 15px; 
   }
 
+
 .custom-img {
     display: block;
-    max-width: 100%;  
-    height: auto;    
-    margin-right: 20px; 
-  }
+    width: 100%; /* ทำให้รูปขยายเต็มความกว้างของ parent element */
+    height: auto; /* คงอัตราส่วนการยืดของรูปภาพ */
+    max-width: 400px; /* กำหนดขนาดสูงสุดของรูปภาพ */
+}
+
+/* เมื่อหน้าจอเล็กลง (เช่น ขนาดจอเล็กกว่า 768px) */
+@media (max-width: 768px) {
+    .custom-img {
+        max-width: 300px; /* ลดขนาดสูงสุดของรูปภาพ */
+    }
+}
+
+/* เมื่อหน้าจอเล็กกว่า 480px */
+@media (max-width: 480px) {
+    .custom-img {
+        max-width: 200px; /* ลดขนาดสูงสุดของรูปภาพอีก */
+    }
+}
+
+.custom-font-h3 {
+    font-family: 'Bevan', cursive; 
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+/* ฟอนต์สำหรับ p */
+.custom-font-p {
+    font-family: 'Raleway', serif; 
+    color: #ffffff;
+}
+
+
+@font-face {
+    font-family: 'Raleway'; 
+    src: url('../assets/font/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ปุ่มดาวน์โหลดตรง tic tac stack */
+.btn-download {
+    background-color: #493D9E; /* สีพื้นหลัง */
+    color: #ffffff; /* สีตัวอักษร */
+    padding: 10px 20px; /* ขนาดปุ่ม */
+    border-radius: 5px; /* มุมโค้ง */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    font-weight: Regular; 
+    margin-top: 20px; /* เว้นระยะจากข้อความ */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีเมื่อ hover */
+}
+
+/* ปรับสีปุ่มเมื่อ hover */
+.btn-download:hover {
+    background-color: #8681ad; /* สีเมื่อ hover */
+    color: white; /* เปลี่ยนสีข้อความเป็นสีขาว */
+}
 
 .image-row {
     display: flex;
@@ -514,9 +639,21 @@ p {
     font-family: 'Lora-VariableFont_wght', sans-serif; /* เปลี่ยนเป็นฟอนต์ที่ต้องการ */
     font-size: 40px; /* ปรับขนาด */
     font-weight: bold; /* ทำให้ตัวหนา */
-    color: #3c3042; 
+    color: #ffffff; 
 }
 
+@font-face {
+    font-family: 'Bevan';
+    src: url('../assets/font/Bevan-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#members h2 {
+    color: white; /* เปลี่ยนสีฟอนต์เป็นสีขาว */
+    text-align: left; /* จัดข้อความไปทางซ้าย */
+    font-family: 'Bevan', sans-serif; /* เปลี่ยนฟอนต์ (ใช้ฟอนต์ที่คุณต้องการ) */
+}
 
 
 /* จัดให้ card-item อยู่ตรงกลาง */
@@ -531,7 +668,7 @@ p {
     user-select: none;
     border-radius: 8px;
     backdrop-filter: blur(30px);
-    background: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #ffffff, #FFEE94); /* เปลี่ยนพื้นหลังเป็นสีขาวไล่สี */
     border: 1px solid rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     text-align: center;
@@ -549,7 +686,6 @@ p {
     padding: 4px;
 }
 
-
 /* User Description */
 .card-list .card-item .user-desc {
     font-size: 1.15rem;
@@ -558,6 +694,7 @@ p {
     margin: 14px 0 40px;
     text-align: center;
 }
+
 
 /* Swiper Pagination Bullets */
 .slider-wrapper .swiper-pagination-bullet {
@@ -570,7 +707,7 @@ p {
 }
 
 .slider-wrapper .swiper-pagination-bullet-active {
-    background: #E75201;
+    background: #FFEE94;
     width: 12px;
 }
 
@@ -583,7 +720,7 @@ p {
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    color: #E75201;
+    color: #FFEE94;
 }
 
 /* Responsive Fixes */
@@ -605,3 +742,35 @@ p {
     object-fit: cover;
     border-radius: 50%;
 }
+
+
+/* Audio controls positioning */
+.audio-controls {
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    z-index: 9999;
+  }
+
+  .audio-controls {
+    width: 100%; /* กำหนดให้ความกว้างของ audio controller เป็น 100% ของ container */
+    max-width: 600px; /* กำหนดขนาดสูงสุดของตัวควบคุมเสียง */
+    margin: 20px auto; /* จัดวางให้อยู่ตรงกลางและเพิ่มพื้นที่บนและล่าง */
+    display: block; /* ทำให้แสดงเป็น block-level element */
+    border-radius: 10px; /* ทำมุมให้โค้งมน */
+    background-color: #333; /* สีพื้นหลังของ audio player */
+}
+
+.audio-controls::-webkit-media-controls-panel {
+    background-color: #222; /* เปลี่ยนพื้นหลังของ panel controls ในเว็บเบราว์เซอร์ที่รองรับ */
+}
+
+.audio-controls::-webkit-media-controls-play-button {
+    background-color: #7c8ba7; /* เปลี่ยนสีปุ่มเล่น */
+    border-radius: 50%; /* ทำให้ปุ่มเล่นเป็นวงกลม */
+}
+
+.audio-controls::-webkit-media-controls-volume-slider {
+    background-color: #666; /* เปลี่ยนสีของ slider volume */
+}
+
