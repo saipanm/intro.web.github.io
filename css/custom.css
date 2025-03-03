@@ -163,7 +163,7 @@ body {
 
 /* ปุ่ม get started */
 #scroll-btn {
-    background-color: #000000; 
+    background-color: #493D9E; 
     color: white; 
     border: none; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -791,6 +791,18 @@ a{
     padding: 50px 0; /* เพิ่ม padding บนและล่าง */
 }
 
+.custom-img-tictac {
+    display: block;
+    width: 100%; /* ทำให้รูปขยายเต็มความกว้างของ parent element */
+    height: auto; /* คงอัตราส่วนการยืดของรูปภาพ */
+    max-width: 900px; /* กำหนดขนาดสูงสุดของรูปภาพ */
+    margin-top: 30px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .custom-img-tictac {
+        transform: scale(1.4) !important;
+    }
+}
 
 
 /* เพิ่มระยะห่างระหว่างหัวข้อ "Character level" กับแถวของรูปภาพ */
