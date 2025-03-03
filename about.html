@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member Web App</title>
-    <link rel="icon" href="favicon.png" type="image/png"> 
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="description" content="Sushi Website Home - Discover our top members and enjoy a fresh sushi experience.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f4f4f4;
+            margin-top: 100px;
+            background-color: #000000;
         }
         h1 {
             text-align: center;
@@ -28,15 +36,17 @@
         label {
             display: block;
             margin-bottom: 5px;
+            color: black; /* เปลี่ยนสีข้อความใน label เป็นสีดำ */
         }
         input, textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            color: black; /* เปลี่ยนสีข้อความใน input และ textarea เป็นสีดำ */
         }
         button {
-            background-color: #567C8D; /* สีพื้นหลังของปุ่ม */
+            background-color: #493D9E; /* สีพื้นหลังของปุ่ม */
             color: #E5E5E5; /* สีข้อความของปุ่ม */
             padding: 10px 15px;
             border: none;
@@ -46,7 +56,7 @@
             width: 100%;
         }
         button:hover {
-            background-color: #3B5B63; /* เปลี่ยนสีพื้นหลังเมื่อชี้ไปที่ปุ่ม */
+            background-color: #675cba; /* เปลี่ยนสีพื้นหลังเมื่อชี้ไปที่ปุ่ม */
             color: #FFFFFF; /* เปลี่ยนสีข้อความเมื่อชี้ไปที่ปุ่ม */
         }
         .contact-info {
@@ -56,6 +66,34 @@
     </style>
 </head>
 <body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+       <!-- เพิ่มรูปที่มุมซ้าย -->
+       <a class="navbar-brand" href="index.html">
+        <img src="assets/images/pumpkin.png" alt="Logo" style="width: 197px; height: 80px; margin-right: 10px;">
+      </a>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+
+        <!-- ปุ่ม Download สำหรับ Desktop -->
+        <div class="d-none d-lg-block">
+          <a href="https://drive.google.com/drive/folders/1c5h5nutadUjSrqx_MEfxvT5ffuUyLUr-" class="btn custom-btn-download">
+            <i class="btn-icon bi-cloud-download"></i>
+            <span>Download</span>
+          </a>
+        </div>
+  
+      </div>
+    </div>
+  </nav>
+  
     <h1>ติดต่อเรา</h1>
     <div class="contact-container">
         <form id="contactForm">
@@ -73,8 +111,7 @@
             </div>
             <button type="submit">ส่งข้อความ</button>
         </form>
-
-    </div>
+    </div>  
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -83,5 +120,10 @@
             // ที่นี่คุณสามารถเพิ่มฟังก์ชันส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์ได้
         });
     </script>
+
+    <!-- Bootstrap JS และ Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>

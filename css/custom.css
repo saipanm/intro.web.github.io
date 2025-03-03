@@ -348,14 +348,27 @@ p {
     margin-bottom: 15px; 
   }
 
-
-.custom-img {
+  .custom-img {
     display: block;
     width: 100%; /* ทำให้รูปขยายเต็มความกว้างของ parent element */
     height: auto; /* คงอัตราส่วนการยืดของรูปภาพ */
-    max-width: 900px; /* กำหนดขนาดสูงสุดของรูปภาพ */
     margin-top: 30px;
 }
+
+/* เมื่อหน้าจอเล็กลง (เช่น ขนาดจอเล็กกว่า 768px) */
+@media (max-width: 768px) {
+    .custom-img {
+        max-width: 1000px; /* ขยายขนาดสูงสุดของรูปภาพเมื่อหน้าจอเล็กลง */
+    }
+}
+
+/* เมื่อหน้าจอเล็กกว่า 480px */
+@media (max-width: 480px) {
+    .custom-img {
+        max-width: 1000px; /* ขยายขนาดสูงสุดของรูปภาพมากขึ้น */
+    }
+}
+
 
 
 .custom-font-h3 {
@@ -712,6 +725,18 @@ p {
     text-align: center;
 }
 
+.user-name {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 20px;
+    text-align: center; /* จัดข้อความตรงกลาง */
+}
+
+
+a{
+    text-decoration: none;
+}
+
 
 /* Swiper Pagination Bullets */
 .slider-wrapper .swiper-pagination-bullet {
@@ -731,13 +756,13 @@ p {
 /* Swiper Navigation Buttons */
 .swiper-button-prev,
 .swiper-button-next {
-    color: #000;
+    color: #7246a3 !important;
     transition: 0.3s ease-in-out;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    color: #FFEE94;
+    color: #b197cf !important;
 }
 
 /* Responsive Fixes */
@@ -760,36 +785,6 @@ p {
     border-radius: 50%;
 }
 
-
-/* Audio controls positioning */
-.audio-controls {
-    position: absolute;
-    top: 90px;
-    right: 30px;
-    z-index: 9999;
-  }
-
-  .audio-controls {
-    width: 100%; /* กำหนดให้ความกว้างของ audio controller เป็น 100% ของ container */
-    max-width: 600px; /* กำหนดขนาดสูงสุดของตัวควบคุมเสียง */
-    margin: 20px auto; /* จัดวางให้อยู่ตรงกลางและเพิ่มพื้นที่บนและล่าง */
-    display: block; /* ทำให้แสดงเป็น block-level element */
-    border-radius: 10px; /* ทำมุมให้โค้งมน */
-    background-color: #333; /* สีพื้นหลังของ audio player */
-}
-
-.audio-controls::-webkit-media-controls-panel {
-    background-color: #222; /* เปลี่ยนพื้นหลังของ panel controls ในเว็บเบราว์เซอร์ที่รองรับ */
-}
-
-.audio-controls::-webkit-media-controls-play-button {
-    background-color: #7c8ba7; /* เปลี่ยนสีปุ่มเล่น */
-    border-radius: 50%; /* ทำให้ปุ่มเล่นเป็นวงกลม */
-}
-
-.audio-controls::-webkit-media-controls-volume-slider {
-    background-color: #666; /* เปลี่ยนสีของ slider volume */
-}
 
 #choose {
     background: linear-gradient(to right, #493D9E, #DAD2FF); /* ไล่สีจากสีม่วงเข้มไปสีม่วงอ่อน */
@@ -848,39 +843,35 @@ p {
 /* ปรับขนาดและสีของข้อความ Level */
 .character-title {
     font-size: 22px;
-    color: white; /* สีขาว */
+    color: white; 
     font-family: 'Bevan-Regular', sans-serif;
     margin-top: 10px; /* เพิ่มระยะห่างจากดาว */
 }
 
-/* สไตล์สำหรับข้อความใหม่ */
 .new-section-title {
     font-size: 28px;
-    color: white; /* สีขาว */
+    color: white; 
     font-family: 'SourceSerifPro-Regular', sans-serif;
-    margin-top: 0px; /* เพิ่มระยะห่างจากชุดรูปภาพ */
+    margin-top: 0px; 
 }
 
 /* Charactor Section */
 #charactor {
-    padding: 50px 0; /* เพิ่มพื้นที่บนและล่าง */
+    padding: 50px 0; 
 
 }
 
-/* Heading */
 #charactor h2 {
-    font-family: 'DenkOne-Regular', sans-serif; /* ฟอนต์สำหรับหัวข้อ */
-    color: #493D9E; /* สีฟอนต์ */
-    font-size: 36px; /* ขนาดฟอนต์ */
-    margin-bottom: 30px; /* เพิ่มระยะห่างด้านล่าง */
+    font-family: 'DenkOne-Regular', sans-serif;
+    color: #493D9E;
+    font-size: 36px;
+    margin-bottom: 30px;
 }
 
-/* สไตล์สำหรับ swiper */
 .swiper {
     position: relative;
 }
 
-/* สไตล์ของ wrapper */
 .slider-wrapper {
     display: flex;
     justify-content: center; /* จัดตำแหน่งเนื้อหาให้ตรงกลาง */
@@ -888,8 +879,9 @@ p {
 
 
 .custom-charactor-image {
-    width: 100%; /* รูปภาพเต็มความกว้างของการ์ด */
-    height: 100%; /* รูปภาพเต็มความสูงของการ์ด */
-    object-fit: cover; /* ปรับขนาดให้พอดีกับกรอบ */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
     border-radius: 8px;
 }
+
