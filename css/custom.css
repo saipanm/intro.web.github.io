@@ -140,15 +140,16 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('../assets/images/bg3.jpg') no-repeat left top;
-    background-size: cover;
-    height: 100vh;
+    background: url('../assets/images/bg3.jpg') no-repeat center center; /* กำหนดตำแหน่งของภาพให้อยู่กลาง */
+    background-size: cover; /* ให้ภาพครอบคลุมพื้นที่เต็มหน้าจอ */
+    height: 100vh; /* ให้ความสูงเต็มหน้าจอ */
     display: flex;
-    align-items: center; /* จัดเนื้อหาแนวตั้ง */
+    align-items: center; /* จัดเนื้อหาในแนวตั้งให้กลาง */
     justify-content: flex-start; /* ชิดซ้าย */
     text-align: left;
     padding: 20px; /* เว้นขอบรอบๆ */
 }
+
 
 /* ขยับเฉพาะเนื้อหาภายใน */
 .hero-content {
@@ -908,3 +909,37 @@ a{
     border-radius: 8px;
 }
 
+/* video section */
+.video-container {
+    position: relative;
+    padding-bottom: 40%; /* ลดอัตราส่วนความสูงของวิดีโอ (ปรับเป็น 40% แทน 56.25% ซึ่งคือ 16:9) */
+    height: 0;
+    overflow: hidden;
+    max-width: 60%; /* ปรับให้ขนาดของวิดีโอไม่ใหญ่เกินไป */
+    margin: 0 auto; /* จัดให้อยู่กลางหน้าจอ */
+    background: #000;
+    margin-bottom: 30px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* กำหนดให้ iframe ใช้ความกว้างเต็มที่ */
+    height: 100%; /* กำหนดให้ iframe ใช้ความสูงเต็มที่ */
+}
+
+.end-section {
+    background: linear-gradient(to right, #493D9E, #DAD2FF); /* ไล่สีจากซ้ายไปขวา */
+    padding: 50px 0;
+    color: white; /* สีของข้อความ */
+    margin-top: 50px;
+}
+
+.end-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'DenkOne-Regular', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}

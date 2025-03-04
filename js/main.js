@@ -71,4 +71,3 @@ document.getElementById('scroll-btn').addEventListener('click', function() {
 document.getElementById('scroll-btn').addEventListener('click', function() {
   document.body.classList.remove('no-scroll'); // ลบคลาส 'no-scroll' เพื่อให้เลื่อนหน้าได้
 });
-
